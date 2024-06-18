@@ -6,7 +6,7 @@ class Conexion:
             host="localhost",
             user="root",
             password="",
-            database="inacap",
+            database="biblioteca",
             port="3306"
         )
         self.cursor = self.conexion.cursor()
