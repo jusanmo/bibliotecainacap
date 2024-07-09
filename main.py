@@ -100,11 +100,11 @@ def agregar_usuario():
     print('-----  Agregar Usuario  -----')
 
     try:
-        rut = input('Ingrese el Rut del usuario (sin puntos ni guion): ')
+        rut = input('Ingrese el Rut del usuario (sin puntos y con guion): ')
         nombre = input('Ingrese el nombre del usuario: ')
         apellidos = input('Ingrese los apellidos del usuario: ')
         correo = input('Ingrese el correo del usuario: ')
-        id_rol = input('Ingrese el ID del rol del usuario: ')
+        id_rol = input('Ingrese el ID del rol del usuario(1.Docente y 2. Estudiante): ')
 
         usuario = Usuario(rut, nombre, apellidos, correo, id_rol)
 
@@ -136,7 +136,7 @@ def modificar_usuario():
             input("Presione Enter para continuar.")
             return
 
-        rut = input('Ingrese el Rut del usuario que desea modificar (sin puntos ni guion): ')
+        rut = input('Ingrese el Rut del usuario que desea modificar (sin puntos y con guion): ')
         usuario_actual = dao_usuario.buscarUsuario(rut)
 
         if not usuario_actual:
